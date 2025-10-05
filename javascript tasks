@@ -1,0 +1,121 @@
+<html>
+<head>
+<script>
+const dice = `############  
+  # o         o # 
+   #         o      # 
+    # o        o # 
+    ###########`;
+
+</script>
+
+<script> 
+    function add(){
+        let n1=document.getElementById("num1").value;
+        let n2=document.getElementById("num2").value;
+        let ans=Number(n1)+Number(n2);
+        document.getElementById("Answer").innerHTML.ans;
+    }
+</script>
+
+<script>
+    function grade(){
+        let analysis = document.getElementById("analysis").value;
+        let design = document.getElementById("design").value;
+        let implementation = document.getElementById("implementation").value;
+        let evaluation = document.getElementById("evaluation").value; 
+        let mark = Number(analysis)+Number(design)+Number(implementation)+Number(evaluation); // takes the total of the inputs
+        let grade;
+        switch (true) {
+            case (mark >= 80):
+            grade = "A*";
+            break;
+            case (mark >= 67 && mark < 80):
+            grade = "A";
+            break;
+            case (mark >= 54 && mark < 67):
+            grade = "B";
+            break;
+            case (mark >= 41 && mark < 54):
+            grade = "C";
+            break;
+            case (mark >= 31 && mark < 41):
+            grade = "D";
+            break;
+            case (mark >= 22 && mark < 31):
+            grade = "E";
+            break;
+            case (mark >= 13 && mark < 22):
+            grade = "F";
+            break;
+            case (mark >= 4 && mark < 13):
+            grade = "G";
+            break;
+            case (mark >= 0 && mark < 4):
+            grade = "U";
+            break;
+            default: // when input doesnt match any of the cases
+                grade = "Invalid input"
+        }
+        document.getElementById("mark").innerHTML=mark;
+        document.getElementById("grade").innerHTML=grade;
+    }
+</script>
+
+<script>
+function avg() {
+    let numNumbers = document.getElementById("numNumbers").value;
+    let number = document.getElementById("number").value;
+    let total = 0;
+    let average = 0;
+    for (let i = 0; i < numNumbers; i++) { // first exp1 executed 1 time, exp2 defines conditon, exp3 executed every time after code is executed
+        total += Number(number);
+    }
+    average = total / numNumbers;
+    document.getElementById("average").innerHTML = average;
+}
+</script>
+
+<script>
+    function interestRate(){
+        let currentBalance = document.getElementById("currentBalance").value;
+        let finalBalance = document.getElementById("finalBalance").value;
+        let year = 0; // once you do "let" once you dont have to do it again
+        while (currentBalance < finalBalance){
+            currentBalance = currentBalance * 1.04
+            year+=1; // can also be year++
+            console.log("Year:",year,"New balance:",Number(currentBalance)) // console.log = print()
+        }
+    }
+</script>
+
+<script>
+    function random(){
+        let randNum = Math.floor(Math.random() * 6) + 1;
+        let word = "";
+        switch (randNum) { //value inside switch() is compared to each case
+            case 1:
+            word = "one";
+            break;
+            case 2:
+            word = "two";
+            break;
+            case 3:
+            word = "three";
+            break;
+            case 4:
+            word = "four";
+            break;
+            case 5:
+            word = "five";
+            break;
+            case 6:
+            word = "six";
+            break;
+            // default:
+            // word = "invalid"
+            // if no case matches, default is run
+        }
+        console.log(word)
+    }
+</script>
